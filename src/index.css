@@ -33,7 +33,7 @@ code {
 .overlay-image {
   position: absolute;
   top: 180px; /* Adjust to position the square image vertically */
-  left: 100px; /* Adjust to position the square image horizontally */
+  left: 200px; /* Adjust to position the square image horizontally */
   transform: translate(-50%, -50%);
   width: 200px; /* Set the desired width of the square image */
   height: 200px; /* Set the desired height of the square image */
