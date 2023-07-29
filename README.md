@@ -1,4 +1,8 @@
 # RAID Website Frontend
+### Rules
+- Though open source, this project is only for the RAID frontend team.
+- Please do not create a PR unless assigned an issue.
+- After making a PR, request for review.
 
 ## Installation
 1. Clone this repository using 
