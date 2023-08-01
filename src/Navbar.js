@@ -1,16 +1,24 @@
 import React from 'react';
 import './index.css';
-import Home from "./pages/Home"
-import {Team} from "./pages/Team"
 import MyImage from "./logo raid.jpeg"
+import {Link,Routes,Route} from "react-router-dom"
 // import {BrowserRouterProps as Router,Link,Routes,Route} from "react-router-dom"
 
 const Navbar = () => {
   return (
     <nav className="navbar-container">
-        <div class="overlay-image">
-            <img src={MyImage} />
+        <div className="overlay-image">
+            <img src={MyImage} alt="raid_logo"/>
         </div>
+        
+        <div>
+        <div className='nav-links-2'>
+          <Link className='link' to="/">Home</Link>
+          <Link className='link' to="/teams">Team</Link>
+        </div>
+        
+        </div> 
+        
     </nav>
     
   );
