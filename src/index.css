@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   background-color:#111825;
   margin: 0;
@@ -17,7 +21,8 @@ code {
 /* navbar.css */
 
 .navbar-container {
-  background-image: url('bg_image.jpeg');
+  background-image:linear-gradient(#93a5cf1b,#e4efe91a),url();
+  background-image: url(bg_image.jpeg);
   background-size:cover; /* Adjust to your liking */
   background-repeat: no-repeat; /* Prevent image repetition */
   /* Additional styling for the navbar */
@@ -27,43 +32,46 @@ code {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  position: relative;
   /* Add any other styles you need for your navbar */
 }
 
-.overlay-image {
-  position: absolute;
-  top: 180px; /* Adjust to position the square image vertically */
-  left: 200px; /* Adjust to position the square image horizontally */
-  transform: translate(-50%, -50%);
-  width: 200px; /* Set the desired width of the square image */
-  height: 200px; /* Set the desired height of the square image */
-  background-image: url('logo\ raid.jpeg'); /* Replace with the path to your square image */
-  background-size: cover;
-  background-position: center center;
+.overlay-image{
+  position:absolute;
+  top:100px;
+  left:150px;
 }
 
-.nav-links {
+.overlay-image img{
+  width:200px;
+  border:white;
+  border-width:2px;
+  border-style:solid;
+}
+
+.nav-links-2{
   list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  margin-left: auto; /* Push the nav links to the right */
-  margin-top: 270px;
-
-
-}
-
-.nav-links li {
-  margin-right: 40px; /* Adjust spacing between navigation links */
-}
-
-.nav-links li:last-child {
-  margin-right: 0; /* Remove margin from the last navigation link */
-}
-
-.nav-links li a {
   text-decoration: none;
-  color:#fff; /* Set the color for the navigation links */
-  /* Add any other styling for the navigation links as needed */
-  font-size: 18px;
+  margin-left:85%;
+  position:absolute;
+  top:220px;
+}
+.nav-links-2{
+  list-style:none;
+  display: inline;
+  margin-right: 40px;
+}
+.link{
+  list-style: none;
+  text-decoration: none;
+  margin-right:30px;
+  font-size: 22px;
+  border:none;
+  width:60px;
+  color:white;
+}
+
+.App{
+  width: 100%;
+  display: block;
 }
