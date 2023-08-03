@@ -1,11 +1,11 @@
 import Navbar from "../Navbar";
 
 const Home=() =>{
-    return(
+  return(
     <div>
-        <Navbar />
+      <Navbar />
     </div>
-    );
+  );
 }
 
 export default Home
