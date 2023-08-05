@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import "./index.css"
-import Home from './pages/Home';
-import {Team} from "./pages/Team"
-import {BrowserRouter,Link,Routes,Route} from "react-router-dom"
+import Home from "./pages/Home";
+import {Team} from "./pages/Team";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 
 
 const App = () => {
