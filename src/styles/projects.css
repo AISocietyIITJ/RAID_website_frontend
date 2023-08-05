@@ -1,0 +1,9 @@
+.projects_page_content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    color:white;
+}
+

@@ -1,28 +1,71 @@
-import React from 'react';
+import { useState } from 'react';
 import './index.css';
-import MyImage from "./logo raid.jpeg"
-import {Link,Routes,Route} from "react-router-dom"
-// import {BrowserRouterProps as Router,Link,Routes,Route} from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
-    <nav className="navbar-container">
-        <div className="overlay-image">
-            <img src={MyImage} alt="raid_logo"/>
+    <>
+
+      <nav className="navbar-container">
+        <div className="logo"></div>
+
+        {/* Mobile menu */}
+        <div className="lg:hidden">
+        <nav className="navbar">
+            {/* <div className="navbar__dropdown"> */}
+              <button onClick={handleDropdownToggle}> 
+              ☰
+                {isDropdownOpen ? 'Close Dropdown' : 'Open Dropdown'}
+              </button>
+              {isDropdownOpen && (
+                <div className="navbar__dropdown-content">
+                  <Link className="link" to="/">
+                    HOME
+                  </Link>
+                  <Link className="link" to="/teams">
+                    TEAM
+                  </Link>
+                  <Link className="link" to="/projects">
+                    PROJECTS
+                  </Link>
+                  <Link className="link" to="/achievements">
+                    ACHIEVEMENTS
+                  </Link>
+                </div>
+              )}
+            
+          </nav>
+          
         </div>
-        
-        <div>
-        <div className='nav-links-2'>
-          <Link className='link' to="/">Home</Link>
-          <Link className='link' to="/teams">Team</Link>
+
+        {/* Desktop menu */}
+        <div className="hidden lg:block">
+        <div className="nav-links">
+            <Link className="link" to="/">
+              HOME
+            </Link>
+            <Link className="link" to="/teams">
+              TEAM
+            </Link>
+            <Link className="link" to="/projects">
+              PROJECTS
+            </Link>
+            <Link className="link" to="/achievements">
+              ACHIEVEMENTS
+            </Link>
+          </div>
+         
+          
         </div>
-        
-        </div> 
-        
-    </nav>
-    
+      </nav>
+    </>
   );
 };
-
 
 export default Navbar;
