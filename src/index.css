@@ -2,169 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Google Fonts Import Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+
+
+
+
 
 body {
-  background:black; /* Set the background color of the whole page to black */
+  background-color:#041C32;
+ 
 }
 
 
-.navbar-container {
-  position: sticky;
-  top: 50px;
-  width: 650px;
-  margin:auto;
-  z-index: 100 
-
-}
-
-.logo {
-  position: absolute;
-  top: 40px;  
-  left: 950px; 
-  transform: translate(-50%, -50%);
-  width: 200px; 
-  height: 200px; 
-  background-image: url('logo1.jpeg'); 
-  background-size: cover;
-  background-position: center center;
-}
-
-
-
-
-
-
-
-
-
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  background: #1D267D;
-  padding: 20px;
-  border-radius: 100px; /* Use a large value to create a circular boundary */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.nav-links .link {
-  position: relative;
-  color: white;
-  font-size: 20px;  
-  font-weight: 500;
-  padding: 6px 12px;
-  text-decoration: none;
-  margin-right:50px;
-}
-
-.nav-links .link:before {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  height: 3px;
-  width: 0%;
-  background: #34efdf;
-  border-radius: 12px;
-  transition: all 0.4s ease;
-}
-
-.nav-links .link:hover:before {
-  width: 100%;
-}
-
-.nav-links .link.center:before {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.nav-links .link.upward:before {
-  width: 100%;
-  bottom: -8px;
-  opacity: 0;
-}
-
-.nav-links .link.upward:hover:before {
-  bottom: -3px;
-  opacity: 1;
-}
-
-.nav-links .link.forward:before {
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s ease;
-}
-
-.nav-links .link.forward:hover:before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
+.glass{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    /* border:1px solid rgba(255, 255, 255, 0.18); */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    z-index: 100px;
   
-
-
-
-/* for mobile */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
 }
 
-.navbar__title {
-  font-size: 1.5rem;
+
+
+
+
+
+.link.active {
+  background-color: #ff6600; 
+  font-weight: bold;
 }
 
-.navbar__dropdown {
-  position: relative;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hoverable{
+  display:inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position:relative;
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  transform: translateZ(0);
+  transition-duration: .3s;
+  transition-property:transform;
 }
 
-.navbar__dropdown button {
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-.navbar__dropdown-content {
-  position: absolute;
+.hoverable:before{
+  position:absolute;
+  pointer-events: none;
+  z-index:-1;
+  content: '';
   top: 100%;
-  left: 0;
-  background-color: #333;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
+  left: 5%;
+  height:10px;
+  width:90%;
+  opacity:0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
 }
 
-.navbar__dropdown-content li {
-  padding: 10px;
-  border-bottom: 1px solid #fff;
+
+
+@keyframes bounce-animation {
+  16.65% {
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+ 
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.navbar__dropdown-content li:last-child {
-  border-bottom: none;
-}
-
-.navbar__dropdown-content li:hover {
-  background-color: #555;
-}
-
-.navbar__dropdown-content.show {
-  display: block;
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
 }
 
 

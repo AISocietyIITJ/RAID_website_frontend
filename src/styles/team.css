@@ -1,19 +1,19 @@
 .team_page_content{
-    margin-top: 100px;
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
 }
 h1{
     color:white;
 }
-/* .logo_2 {
+.logo_2 {
     position: relative;
     top: 1000px;  
     left: 10px; 
     transform: translate(-50%, -50%);
-    width: 500px; 
-    height: 500px; 
-    background-image: url('logo raid.jpeg'); 
+    width: 1000px; 
+    height: 1000px; 
+    background-image: url('./logo raid.jpeg'); 
     background-size: cover;
     background-position: center center;
-  } */
+  }
