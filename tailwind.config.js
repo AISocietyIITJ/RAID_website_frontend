@@ -6,8 +6,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                customOrange: '#fd700a'
+                customOrange: '#F2921D'
             }
+          
         },
     },
     plugins: [],
