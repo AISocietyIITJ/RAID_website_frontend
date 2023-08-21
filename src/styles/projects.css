@@ -1,10 +1,9 @@
-.home_content{
+.projects_page_content{
     margin-top: 10rem;
-  
     display: flex;
     justify-content: center;
 }
 h1{
     color:white;
-    font-size: larger;
 }
+
