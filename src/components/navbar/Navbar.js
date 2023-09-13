@@ -47,19 +47,16 @@ function Navbar() {
     
         <div className=" mt-3 flex flex-col items-center fixed top-0 left-1/2 transform -translate-x-1/2">
         
-          <Link className="block link text-white text-l hoverable transition-transform  hover:before:opacity-100 hover:text-customOrange bounce mb-4 neon" to="/">
-            HOME
+        {linksData.map((link, index) => (
+        <Link
+          key={index}
+          to={link.url}
+          className="block link text-white text-l hoverable transition-transform  hover:before:opacity-100 hover:text-customOrange bounce mb-4 neon"
+          >
+            {link.name}
           </Link>
-          <Link className="block link text-white text-l hoverable transition-transform  hover:before:opacity-100 hover:text-customOrange bounce mb-4 neon" to="/teams">
-            TEAM
-          </Link>
-          <Link className="block link text-white text-l hoverable transition-transform  hover:before:opacity-100 hover:text-customOrange bounce mb-4 neon" to="/projects">
-            PROJECTS
-          </Link>
-          <Link className="block link text-white text-l hoverable transition-transform  hover:before:opacity-100 hover:text-customOrange bounce mb-4 neon" to="/achievements">
-         
-            ACHIEVEMENTS
-          </Link>
+          ))}
+          
         </div>
 
 
@@ -78,7 +75,7 @@ function Navbar() {
      
 
 <div class="hidden lg:block">
-    <nav className="flex flex-row justify-start items-center gap-10 bg-black-200 p-4 pl-20 pr-20 fixed top-3 left-1/2 transform -translate-x-1/2 left-100 glass">
+    <nav className="flex flex-row justify-start items-center gap-10 bg-black-200 p-3 pl-20 pr-20 fixed top-3 left-1/2 transform -translate-x-1/2 left-100 glass">
       <div className="flex items-center space-x-20">
       
       
@@ -86,7 +83,7 @@ function Navbar() {
         <Link
           key={index}
           to={link.url}
-          className="text-white text-2xl hoverable transition-transform hover:before:opacity-100 hover:before:translate-y-[-5px] hover:text-customOrange bounce glinks neon"
+          className="text-white text-xl hoverable transition-transform hover:before:opacity-100 hover:before:translate-y-[-5px] hover:text-customOrange bounce glinks neon"
         >
           
           {link.name}
