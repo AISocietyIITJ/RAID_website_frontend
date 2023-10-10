@@ -1,0 +1,51 @@
+.event{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* height: 50vh; */
+}
+.card{
+    height: 400px;
+    margin: 50px;
+    overflow: hidden;
+}
+.card img{
+    height: 400px;
+    width: 350px;
+    border-radius: 3px;
+}
+.intro{
+height: 70px;
+width: 350px;
+padding: 6px;
+position: relative;
+bottom: 63px;
+background-color:transparent;
+
+}
+.intro p{
+    visibility: hidden;
+    opacity: 0;
+}
+.card:hover .intro{
+    height: 200px;
+
+    bottom: 200px;
+    background-color: #181717;
+    animation:  move 1s linear;
+}
+@keyframes move{
+    from{
+        height: 70px;
+        bottom: 63px;
+    }
+    to{
+        height: 200px;
+        bottom: 200px;
+
+    }
+}
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}

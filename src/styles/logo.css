@@ -1,0 +1,66 @@
+
+.span{
+    display: inline-block;
+    opacity: 0;
+    animation: opticity 2s  forwards; 
+   }
+   .part1{
+    animation-delay: 0.4s;
+  
+   }
+   .part2{
+    animation-delay: 1s;
+   }
+   .part3{
+    animation-delay: 0.7s;
+   }
+   .part4{
+    animation-delay: 1.5s;
+   }
+   @keyframes opticity {
+    
+    0% {
+        opacity: 0.1;
+        
+      }
+    
+      2% {
+        opacity: 1;
+      }
+    
+      8% {
+        opacity: 0.1;
+      }
+    
+      9% {
+        opacity: 1;
+      }
+    
+      12% {
+        opacity: 0.1;
+      }
+      20% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 0.3;
+      }
+      30% {
+        opacity: 1;
+      }
+    
+      70% {
+        opacity: 0.7;
+      }
+      72% {
+        opacity: 0.2;
+      }
+    
+      77% {
+        opacity: 0.9;
+      }
+      100% {
+        opacity: 1;
+      }
+  }
+  
