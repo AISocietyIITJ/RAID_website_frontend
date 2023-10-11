@@ -16,7 +16,7 @@ function Navbar() {
   return (
 
 <>
-    <div className='lg:hidden p-5'>
+    <div className='lg:hidden p-5 sticky z-50'>
     <div className="fixed top-0 right-0 p-5">
     <button className="focus:outline-none" onClick={toggleMenu}>
         <svg
@@ -66,7 +66,7 @@ function Navbar() {
         <div className="fixed top-0 ">
         <img
             className="h-20  w-20"
-            src={require('../../logo_f.png')}
+            src={require('../../images/logo_f.png')}
             alt="Logo"
     />
     </div>
@@ -74,7 +74,7 @@ function Navbar() {
     </div>
      
 
-<div class="hidden lg:block">
+<div class="hidden lg:block sticky z-50">
     <nav className="flex flex-row justify-start items-center gap-10 bg-black-200 p-3 pl-20 pr-20 fixed top-3 left-1/2 transform -translate-x-1/2 left-100 glass">
       <div className="flex items-center space-x-20">
       
