@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Featured from "../components/navbar/Featured";
 import Logo from "../components/navbar/Logo";
 import "../styles/home.css";
-import Company from "../components/navbar/Company";
-import Projecthighlight from "../components/navbar/Projecthighlight";
-import Eventhighlight from "../components/navbar/Eventhighlight";
-import Eventproject from "../components/navbar/Eventproject";
-import Footer from "../components/navbar/Footer";
+// import Company from "../components/navbar/Company";
+// import Projecthighlight from "../components/navbar/Projecthighlight";
+// import Eventhighlight from "../components/navbar/Eventhighlight";
+// import Eventproject from "../components/navbar/Eventproject";
+// import Footer from "../components/navbar/Footer";
 import logo from "../images/logo.png";
 
 const Home = () => {
@@ -59,7 +59,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* --------------------- */}
+        {/* ---------------------
         <div className={styles ? " " : "hidden"}>
           <div className=" ">
             <div className=" bg-green-500d ">
@@ -79,7 +79,16 @@ const Home = () => {
           <div className="footer">
             <Footer />
           </div>
-        </div>
+        </div> */}
+
+
+
+      {/* just add because of a screen height div */}
+
+      
+        <hr />
+        <div className="h-screen"></div>
+
       </div>
     </>
   );
